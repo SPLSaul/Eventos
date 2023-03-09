@@ -27,6 +27,7 @@ namespace Eventos
             //this.Visible = false;
             timer1.Enabled = false;
             button1.BackColor= Color.Red;
+            
         }
 
         private void Form1_Shown_1(object sender, EventArgs e)
@@ -49,6 +50,23 @@ namespace Eventos
         private string[] rutas = { "C:\\Users\\Saul\\source\\repos\\Eventos\\Eventos\\Imagenes\\Img1.png", "C:\\Users\\Saul\\source\\repos\\Eventos\\Eventos\\Imagenes\\Img2.png", "C:\\Users\\Saul\\source\\repos\\Eventos\\Eventos\\Imagenes\\Img3.png", "C:\\Users\\Saul\\source\\repos\\Eventos\\Eventos\\Imagenes\\Img4.png", "C:\\Users\\Saul\\source\\repos\\Eventos\\Eventos\\Imagenes\\Img5.png" };
         private int contador = 0;
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Random random = new Random();
+            random.Next();
+            Button button2 = new Button();
+            button2.Text = "Nuevo Botón";
+            button2.Location = new Point(50, 50);
+            this.Controls.Add(button2);
 
+        }
+        
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Label sonder  = new Label();
+            sonder.Text = "Black Metal";
+            sonder.Location = new Point((this.Width/2)-20, (this.Height-20)-30);
+            this.Controls.Add(sonder);
+        }
     }
 }
