@@ -35,6 +35,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.darkmode = new System.Windows.Forms.RadioButton();
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.lblSat1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,6 +93,18 @@
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
+            // lblSat1
+            // 
+            this.lblSat1.AutoSize = true;
+            this.lblSat1.BackColor = System.Drawing.Color.Transparent;
+            this.lblSat1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSat1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblSat1.Location = new System.Drawing.Point(306, 181);
+            this.lblSat1.Name = "lblSat1";
+            this.lblSat1.Size = new System.Drawing.Size(106, 24);
+            this.lblSat1.TabIndex = 5;
+            this.lblSat1.Text = "SATANAS";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -99,6 +112,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblSat1);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.darkmode);
             this.Controls.Add(this.button2);
@@ -121,6 +135,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.RadioButton darkmode;
         private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Label lblSat1;
     }
 }
 

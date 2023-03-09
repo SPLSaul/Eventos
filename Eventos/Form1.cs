@@ -19,6 +19,9 @@ namespace Eventos
         public Label sonder3 = new Label();
         public Random random = new Random();
         public Random random2 = new Random();
+        //public Label lblSat = new Label();
+        public int cont = 0;
+        
         List<Color> colores = new List<Color> { Color.Red, Color.Green, Color.Blue, Color.Yellow };
         public int indiceColor = 0;
 
@@ -33,7 +36,10 @@ namespace Eventos
             this.BackgroundImage = Image.FromFile("C:\\Users\\Saul\\source\\repos\\Eventos\\Eventos\\Imagenes\\LightMode.png");            
             Icon icono = new Icon("C:\\Users\\Saul\\source\\repos\\Eventos\\Eventos\\Imagenes\\Bunny.ico");
             this.Icon = icono;
+            
             btnCerrar.Hide();
+
+            lblSat1.Hide();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -45,8 +51,9 @@ namespace Eventos
             {
                 indiceColor = 0;
             }
-
-
+            cont++;
+            int fuente = 14 + 5 * cont;
+            lblSat1.Font = new Font("Microsoft Sans Serif", fuente, FontStyle.Italic | FontStyle.Bold);
         }
 
         private void Form1_Shown_1(object sender, EventArgs e)
@@ -134,7 +141,8 @@ namespace Eventos
 
         private void darkmode_CheckedChanged(object sender, EventArgs e)
         {
-            
+            lblSat1.Show();
+
             lightmode = false;            
             //button2.Enabled = lightmode;
             this.BackgroundImage = Image.FromFile("C:\\Users\\Saul\\source\\repos\\Eventos\\Eventos\\Imagenes\\DarkMode.jpg");
@@ -152,7 +160,7 @@ namespace Eventos
             this.Controls.Add(sonder3);
             this.FormBorderStyle = FormBorderStyle.None;
             btnCerrar.Show();
-
+            
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
